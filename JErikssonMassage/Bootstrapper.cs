@@ -23,5 +23,11 @@ namespace JErikssonMassage
 
             Bundles.BuildBundles();
         }
+
+        protected override void RequestStartup(Nancy.TinyIoc.TinyIoCContainer container, Nancy.Bootstrapper.IPipelines pipelines, NancyContext context)
+        {
+            base.RequestStartup(container, pipelines, context);
+            Bundles.BuildBundles(); //TODO: Remove me
+        }
     }
 }

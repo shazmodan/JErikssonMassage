@@ -78,6 +78,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\favicon.ico" />
+    <Content Include="Content\images\1440x1000.gif" />
+    <Content Include="Content\images\apple-touch-icon-114x114.png" />
+    <Content Include="Content\images\apple-touch-icon-72x72.png" />
+    <Content Include="Content\images\apple-touch-icon.png" />
+    <Content Include="Content\images\favicon.ico" />
+    <Content Include="Content\images\logo_250x250.png" />
+    <Content Include="Content\images\logo_340x340.png" />
     <Content Include="Content\index.html" />
     <Content Include="Scripts\init.js" />
     <Content Include="Styles\normalize.css" />
@@ -86,7 +94,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\SquishItLess.cs" />
-    <Compile Include="AssetModule.cs" />
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Bundles.cs" />
     <Compile Include="IndexModule.cs" />
@@ -94,7 +101,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="Styles\top-menu.less" />
     <Content Include="Styles\base.less" />
+    <Content Include="Content\fonts\elegantlux-mager-webfont.eot" />
+    <Content Include="Content\fonts\elegantlux-mager-webfont.ttf" />
+    <Content Include="Content\fonts\elegantlux-mager-webfont.woff" />
+    <Content Include="Content\fonts\elegantlux-mager-webfont.woff2" />
+    <Content Include="Content\fonts\tarzanawide-webfont.eot" />
+    <Content Include="Content\fonts\tarzanawide-webfont.ttf" />
+    <Content Include="Content\fonts\tarzanawide-webfont.woff" />
+    <Content Include="Content\fonts\tarzanawide-webfont.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

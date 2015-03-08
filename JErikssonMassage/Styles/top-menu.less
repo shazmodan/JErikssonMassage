@@ -1,0 +1,52 @@
+﻿@container-width: 960px;
+@logo-size: 4.4em;
+@header-size: @logo-size / 2.6;
+
+.top-menu {
+    padding-top: 1em;
+
+    a {
+        text-decoration: none;
+    }
+
+    .logo {
+        width: @logo-size;
+        height: auto;
+        float: left;
+    }
+
+    .logo-name {
+        float: left;
+        margin-top: @header-size / 10;
+
+        h1 {
+            font-family: TarzanaWide;
+            color: #0088c3;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0.7em;
+            font-size: @header-size;
+            text-transform: uppercase;
+            text-align: center;
+            
+        }
+    }
+
+    .right-menu {
+        margin-top: @header-size / 2;
+        font-size: @header-size / 1.3;
+        
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            display: inline;
+            margin-left: 4.5em;
+
+           &:first-of-type  {
+                margin-left: 1em;
+            }
+        }
+    }
+}
