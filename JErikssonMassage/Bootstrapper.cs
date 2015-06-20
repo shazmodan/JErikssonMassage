@@ -1,12 +1,5 @@
 ﻿using Nancy;
 using Nancy.Conventions;
-using SquishIt.Framework;
-using SquishIt.Less;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JErikssonMassage
 {
@@ -27,7 +20,7 @@ namespace JErikssonMassage
         protected override void RequestStartup(Nancy.TinyIoc.TinyIoCContainer container, Nancy.Bootstrapper.IPipelines pipelines, NancyContext context)
         {
             base.RequestStartup(container, pipelines, context);
-            Bundles.BuildBundles(); //TODO: Remove me
+            Bundles.BuildBundles(); //TODO: Remove me, only used for quick css updates in DEBUG mode.
         }
     }
 }
