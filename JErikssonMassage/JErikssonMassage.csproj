@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\favicon.ico" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\images\1440x1000.gif" />
     <Content Include="Content\images\apple-touch-icon-114x114.png" />
     <Content Include="Content\images\apple-touch-icon-72x72.png" />
@@ -91,8 +92,8 @@
     <Content Include="Content\images\massage_small_box_180_190.jpg" />
     <Content Include="Content\index.html" />
     <Content Include="Scripts\init.js" />
+    <Content Include="Styles\bootstrap.css" />
     <Content Include="Styles\normalize.css" />
-    <Content Include="Styles\skeleton.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -116,6 +117,10 @@
     <Content Include="Content\fonts\tarzanawide-webfont.woff2" />
     <Content Include="Styles\general.less" />
     <Content Include="Styles\variables.less" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

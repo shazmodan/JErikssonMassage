@@ -1,7 +1,10 @@
 ﻿@import "variables.less";
 
+@menu-font-size: @header-size / 1.2;
+
 .top-menu {
     padding-top: 1em;
+    padding-bottom: 1em;
 
     a {
         text-decoration: none;
@@ -30,8 +33,9 @@
     }
 
     .right-menu {
-        margin-top: @header-size / 2;
-        font-size: @header-size / 1.3;
+        font-size: @menu-font-size;
+        margin-top: @menu-font-size / 1.8;
+        text-align: center;
         
         ul {
             list-style-type: none;
@@ -39,11 +43,12 @@
 
         li {
             display: inline;
-            margin-left: 4.5em;
+        }
 
-           &:first-of-type  {
-                margin-left: 1em;
-            }
+        @media (max-width: 768px) {
+            display: none;
         }
     }
+
+    
 }
