@@ -32,6 +32,16 @@
         }
     }
 
+    @media (max-width: 768px) {
+        .left-menu {
+            text-align: center;
+                
+            .logo, .logo-name {
+                float:none !important;
+            }
+        }
+    }
+
     .right-menu {
         font-size: @menu-font-size;
         margin-top: @menu-font-size / 1.8;
@@ -44,11 +54,5 @@
         li {
             display: inline;
         }
-
-        @media (max-width: 768px) {
-            display: none;
-        }
     }
-
-    
 }
