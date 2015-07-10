@@ -71,17 +71,33 @@ div.normal-text {
 }
 
 .box-large {
-    max-height: 407px;
+    height: 407px;
+
+    @media (max-width: 992px) {
+        height: 394px;
+        
+    }
 }
+
 
 .box-medium {
-    max-height: 179px;
+    height: 172px;
 }
 
-.text-wrap{
+.text-wrap {
     padding-right: 8px;
 }
 
-.last-margin{
-    margin-top: 22px;
+.last-margin {
+    margin-top: 16px;
+}
+
+.fit-to-container {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.stretch-to-container {
+    width: 100%;
+    height: 100%;
 }
