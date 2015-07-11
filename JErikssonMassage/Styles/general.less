@@ -1,13 +1,5 @@
 ﻿@import "variables.less";
 
-h2 {
-    margin-top: 2rem !important;
-}
-
-img {
-    max-width:100%;
-}
-
 div.cover-splash {
     background-image: url("../Content/images/massage_background_1920_1080.jpg");
     background-repeat: no-repeat;
@@ -32,11 +24,11 @@ a.call-to-action {
   border-radius: 12px;
   color: #fff;
   font-size: 20px;
-  background: #0088C3;
+  background: @light-blue;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
 
-  &:hover{
+  &:hover {
     background: #3cb0fd;
     background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
     background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
@@ -49,13 +41,45 @@ a.call-to-action {
 
 }
 
-div.normal-text {
+.font-normal {
     color: #000;
+}
+
+.font-medium {
+    font-size: 1.3em;
+}
+
+.font-large {
+    color: #000;
+    font-size: 1.4em;
+}
+
+.text-center {
     text-align: center;
 }
 
-.bordered{
-    border: 1px solid #0088c3;
+.text-left {
+    text-align: left;
+}
+
+.font-xl {
+    font-size: 1.6em;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.icon-padding {
+    padding-right: 10px;
+}
+
+.icon-margin {
+    margin-top: 8px;
+}
+
+.bordered {
+    border: 1px solid @light-blue;
 }
 
 .main-wrapper {
@@ -64,10 +88,6 @@ div.normal-text {
 
 .left {
     float: left;
-}
-
-.clear {
-    clear: both;
 }
 
 .box-large {
@@ -83,13 +103,13 @@ div.normal-text {
     height: 172px;
 }
 
+.box-small {
+    height: 124px;
+}
+
 .text-wrap {
     padding-right: 8px;
 }
-
-/*.last-margin {
-    margin-top: 12px;
-}*/
 
 .box-margin {
     margin-top: 12px;
@@ -106,4 +126,21 @@ div.normal-text {
 }
 .no-padding {
     padding: 0;
+}
+
+.area-padding {
+    padding-bottom: 20px;
+}
+
+.bg-blue {
+    background-color: #a7e1f2;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.plain-list {
+    list-style-type: none;
+    text-align: left;
 }

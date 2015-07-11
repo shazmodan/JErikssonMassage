@@ -1,4 +1,6 @@
-﻿@font-face {
+﻿@import "variables.less";
+
+@font-face {
     font-family: 'TarzanaWide';
     src: url('../Content/fonts/tarzanawide-webfont.eot');
     src: url('../Content/fonts/tarzanawide-webfont.eot?#iefix') format('embedded-opentype'),
@@ -21,7 +23,7 @@
 }
 
 body {
-    font-size: 12px;
+    font-size: @default-font-size;
     font-family: 'ElegantLux', 'TarzanaWide', Helvetica, Arial, sans-serif !important;
     letter-spacing: 0.02em;
     overflow-x: hidden;
@@ -31,3 +33,15 @@ a {
     color: black;
 }
 
+h2 {
+    margin-top: 2rem !important;
+}
+
+img {
+    max-width:100%;
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+}
