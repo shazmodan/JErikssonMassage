@@ -87,8 +87,10 @@
     <Content Include="Content\images\favicon.ico" />
     <Content Include="Content\images\logo_250x250.png" />
     <Content Include="Content\images\logo_340x340.png" />
-    <Content Include="Content\images\massage_background_1920_1080.jpg" />
+    <Content Include="Content\images\massage_background_1920_835.jpg" />
+    <Content Include="Content\images\massage_face_small_187x176.jpg" />
     <Content Include="Content\images\massage_large_box_460_259.jpg" />
+    <Content Include="Content\images\massage_partial_187x176.jpg" />
     <Content Include="Content\images\massage_small_box_180_190.jpg" />
     <Content Include="Content\index.html" />
     <Content Include="Scripts\init.js" />

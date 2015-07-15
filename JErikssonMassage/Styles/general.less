@@ -1,44 +1,68 @@
 ﻿@import "variables.less";
 
 div.cover-splash {
-    background-image: url("../Content/images/massage_background_1920_1080.jpg");
+    background-image: url("../Content/images/massage_background_768_320.jpg");
     background-repeat: no-repeat;
+    background-position: center top;
     background-size: cover;
+    margin: auto;
+    height: 320px;
+    font-size: 2.0em;
+
+    @media (min-width: 768px) {
+        background-image: url("../Content/images/massage_background_1920_835.jpg");
+        height: 690px;
+        font-size: 3em;
+    }
+
+    @media (min-width: 992px){
+        background-image: url("../Content/images/massage_background_1920_835.jpg");
+        height: 690px;
+    }
 }
 
 .text-container {
-    margin-top: 150px;
-    margin-bottom: 200px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     color: white;
     text-align: center;
-    font-size: 3em;
+    z-index: 100;
 
     p {
         margin-bottom: 0;
     }
+
+    @media (min-width: 768px) {
+        font-size: 1.1em;
+    }
 }
 
 a.call-to-action {
-  -webkit-border-radius: 12;
-  -moz-border-radius: 12;
-  border-radius: 12px;
-  color: #fff;
-  font-size: 20px;
-  background: @light-blue;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
-
-  &:hover {
-    background: #3cb0fd;
-    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    -webkit-border-radius: 12;
+    -moz-border-radius: 12;
+    border-radius: 12px;
+    color: #fff;
+    background: @light-blue;
+    font-size: 0.8em;
+    padding: 5px 10px 5px 10px;
     text-decoration: none;
-    color: inherit;
-  }
 
+    @media (min-width: 768px) {
+        font-size: 0.6em;
+        padding: 10px 20px 10px 20px;
+    }
+
+    &:hover {
+        background: #3cb0fd;
+        background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+        text-decoration: none;
+        color: inherit;
+    }
 }
 
 .font-normal {
@@ -74,10 +98,6 @@ a.call-to-action {
     padding-right: 10px;
 }
 
-.icon-margin {
-    margin-top: 8px;
-}
-
 .bordered {
     border: 1px solid @light-blue;
 }
@@ -95,12 +115,11 @@ a.call-to-action {
 
     @media (max-width: 992px) {
         height: 394px;
-        
     }
 }
 
 .box-medium {
-    height: 172px;
+    height: 176px;
 }
 
 .box-small {
@@ -109,6 +128,10 @@ a.call-to-action {
 
 .text-wrap {
     padding-right: 8px;
+}
+
+.no-wrap {
+    white-space: nowrap;
 }
 
 .box-margin {
@@ -124,6 +147,7 @@ a.call-to-action {
     width: 100%;
     height: 100%;
 }
+
 .no-padding {
     padding: 0;
 }
@@ -137,10 +161,63 @@ a.call-to-action {
 }
 
 .bg-white {
-    background-color: white;
+    background-color: #fff;
+}
+
+.bg-grey {
+    background-color: #eaeaea;
 }
 
 .plain-list {
     list-style-type: none;
     text-align: left;
+}
+
+.price-icon {
+    background: #ef0000;
+    color: #fff;
+    display: block;
+    font-size: 1.7rem;
+    padding: 0px 14px 2px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 1px;
+    z-index: 101;
+
+    &:after {
+        border-right: 4px solid #cb0000;
+        content: '';
+        height: 27px;
+        position: absolute;
+        right: -4px;
+        top: 2px;
+        width: 0;
+    }
+}
+
+.time-icon {
+    background: @light-blue;
+    color: #fff;
+    display: block;
+    font-size: 1.7rem;
+    padding: 0px 14px 2px;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    z-index: 101;
+
+    &:after {
+        border-right: 4px solid #286D97;
+        content: '';
+        height: 27px;
+        position: absolute;
+        left: -4px;
+        top: 2px;
+        width: 0;
+    }
+}
+
+.align-middle {
+    vertical-align: middle;
 }

@@ -3,10 +3,7 @@
 @font-face {
     font-family: 'TarzanaWide';
     src: url('../Content/fonts/tarzanawide-webfont.eot');
-    src: url('../Content/fonts/tarzanawide-webfont.eot?#iefix') format('embedded-opentype'),
-            url('../Content/fonts/tarzanawide-webfont.woff') format('woff'),
-            url('../Content/fonts/tarzanawide-webfont.ttf') format('truetype'),
-            url('../Content/fonts/tarzanawide-webfont.woff2') format('woff2');
+    src: url('../Content/fonts/tarzanawide-webfont.eot?#iefix') format('embedded-opentype'), url('../Content/fonts/tarzanawide-webfont.woff') format('woff'), url('../Content/fonts/tarzanawide-webfont.ttf') format('truetype'), url('../Content/fonts/tarzanawide-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -14,19 +11,39 @@
 @font-face {
     font-family: 'ElegantLux';
     src: url('../Content/fonts/elegantlux-mager-webfont.eot');
-    src: url('../Content/fonts/elegantlux-mager-webfont.eot?#iefix') format('embedded-opentype'),
-            url('../Content/fonts/elegantlux-mager-webfont.woff') format('woff'),
-            url('../Content/fonts/elegantlux-mager-webfont.ttf') format('truetype'),
-            url('../Content/fonts/elegantlux-mager-webfont.woff2') format('woff2');
+    src: url('../Content/fonts/elegantlux-mager-webfont.eot?#iefix') format('embedded-opentype'), url('../Content/fonts/elegantlux-mager-webfont.woff') format('woff'), url('../Content/fonts/elegantlux-mager-webfont.ttf') format('truetype'), url('../Content/fonts/elegantlux-mager-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 body {
+    line-height: 1.42857143;
+    background-color: #fff;
     font-size: @default-font-size;
-    font-family: 'ElegantLux', 'TarzanaWide', Helvetica, Arial, sans-serif !important;
+    font-family: 'ElegantLux', 'TarzanaWide', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     letter-spacing: 0.02em;
     overflow-x: hidden;
+
+    @media (min-width: 0px) {
+        font-size: 12px;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 12px;
+    }
+
+    @media (min-width: 992px) {
+        font-size: @default-font-size;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: @default-font-size;
+    }
 }
 
 a {
@@ -38,7 +55,7 @@ h2 {
 }
 
 img {
-    max-width:100%;
+    max-width: 100%;
 }
 
 iframe {
