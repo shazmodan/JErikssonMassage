@@ -40,13 +40,13 @@
                     <nav class="nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
                         <ul>
                             <li class="col-lg-3 col-md-3 col-sm-3">
-                                <a class="menu-item" href="#behandlingar" rel="internal" itemprop="url">Behandlingar</a>
+                                <a class="menu-item" href="#behandlingar" data-href="#behandlingar" rel="internal" itemprop="url">Behandlingar</a>
                             </li>
                             <li class="col-lg-3 col-md-3 col-sm-3">
-                                <a class="menu-item" href="#boka" rel="internal" itemprop="url">Lediga tider</a>
+                                <a class="menu-item" href="#lediga-tider" data-href="#lediga-tider" rel="internal" itemprop="url">Lediga tider</a>
                             </li>
                             <li class="col-lg-3 col-md-3 col-sm-2">
-                                <a class="menu-item" href="#hitta-hit" rel="internal" itemprop="url">Hitta hit</a>
+                                <a class="menu-item" href="#hitta-hit" data-href="#hitta-hit" rel="internal" itemprop="url">Hitta hit</a>
                             </li>
                         </ul>
                     </nav>
@@ -60,7 +60,7 @@
             <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8 text-container">
                 <p>Undvik stela och verkande muskler</p>
                 <p>Prova på massageterapi</p>
-                <a class="call-to-action" href="#lediga-tider">Se lediga tider</a>
+                <a id="call-to-action" href="#lediga-tider">Se lediga tider</a>
             </div>
         </div>
     </div>
@@ -151,7 +151,7 @@
 
     <div class="font-medium bg-white area-padding text-center">
         <div class="container">
-            <div class="row">
+            <div id="hitta-hit" class="row">
                 <h2>Hitta hit</h2>
                 <div class="col-xs-12 col-sm-6 text-left">
                     <p>Åkersberga Centrum Spa ligger 5 minuter till fots från Åkersberga centrum.</p>
@@ -191,7 +191,7 @@
             </div>
         </div>
     </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="Content/combined.js"></script>
 </body>
 </html>

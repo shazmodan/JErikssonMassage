@@ -1,1 +1,1 @@
-﻿console.log("Hello World!");
+﻿var massage=massage||{};massage.smoothScroll=function(){var n=$(".menu-item"),t=$("#call-to-action");n.each(function(n,t){$(t).click(function(n){var t=$(this).data("href");console.log("scrollToId",t),$("html, body").animate({scrollTop:$(t).offset().top},700),n.preventDefault()})})},$(document).ready(function(){massage.smoothScroll()});
