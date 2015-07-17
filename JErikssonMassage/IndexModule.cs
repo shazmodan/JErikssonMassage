@@ -1,9 +1,4 @@
 ﻿using Nancy;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
 
 namespace JErikssonMassage
 {
@@ -11,7 +6,11 @@ namespace JErikssonMassage
     {
         public IndexModule()
         {
-            Get["/"] = _ => View["Content/index.html", null];
+            Get["/"] = _ =>
+            {
+                //Response.Context.Response.ContentType = "text/html; charset=utf8";
+                return View["Content/index.html", null].WithContentType("text/html;charset=utf8");
+            };
         }
     }
 }
