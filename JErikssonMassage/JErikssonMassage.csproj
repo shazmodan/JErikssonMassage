@@ -85,6 +85,7 @@
     <Content Include="Content\images\apple-touch-icon-72x72.png" />
     <Content Include="Content\images\apple-touch-icon.png" />
     <Content Include="Content\images\favicon.ico" />
+    <Content Include="Content\images\karta.jpg" />
     <Content Include="Content\images\logo_250x250.png" />
     <Content Include="Content\images\logo_340x340.png" />
     <Content Include="Content\images\massage_background_1920_835.jpg" />
