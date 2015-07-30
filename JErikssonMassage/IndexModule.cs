@@ -6,7 +6,7 @@ namespace JErikssonMassage
 {
     public class IndexModule : NancyModule
     {
-        private static readonly string AppPath;
+        public static readonly string AppPath;
 
         static IndexModule()
         {
@@ -17,7 +17,7 @@ namespace JErikssonMassage
         {
             Get["/"] = _ =>
             {
-                return View["Content/index.html", null].WithContentType("text/html;charset=utf8");
+                return View["index.html", new { Bundles.CombinedCssPath, Bundles.CombinedJsPath }].WithContentType("text/html;charset=utf8");
             };
 
             Get["/sitemap.xml"] = _ =>

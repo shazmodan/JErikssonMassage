@@ -94,8 +94,8 @@
     <Content Include="Content\images\massage_large_box_716_403.jpg" />
     <Content Include="Content\images\massage_partial_187x176.jpg" />
     <Content Include="Content\images\massage_small_box_180_190.jpg" />
-    <Content Include="Content\index.html" />
     <Content Include="Content\sitemap.xml" />
+    <Content Include="index.html" />
     <Content Include="Scripts\init.js" />
     <Content Include="Styles\bootstrap.css" />
     <Content Include="Styles\normalize.css" />

@@ -15,13 +15,8 @@ namespace JErikssonMassage
             base.ApplicationStartup(container, pipelines);
             StaticConfiguration.DisableErrorTraces = false;
 
+            Bundles.CleanOldBundles();
             Bundles.BuildBundles();
-        }
-
-        protected override void RequestStartup(Nancy.TinyIoc.TinyIoCContainer container, Nancy.Bootstrapper.IPipelines pipelines, NancyContext context)
-        {
-            base.RequestStartup(container, pipelines, context);
-            Bundles.BuildBundles(); //TODO: Remove me when hash is appended to combined.css.
         }
     }
 }

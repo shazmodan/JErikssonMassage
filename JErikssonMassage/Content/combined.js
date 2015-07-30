@@ -1,1 +1,0 @@
-﻿var massage=massage||{};massage.smoothScroll=function(){var i=$(".menu-item"),t=$("#call-to-action"),n=$.merge(i,t);n.each(function(n,t){$(t).click(function(n){var t=$(this).data("href");$("html, body").animate({scrollTop:$(t).offset().top},700),n.preventDefault()})})},$(document).ready(function(){massage.smoothScroll()});

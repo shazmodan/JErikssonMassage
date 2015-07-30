@@ -1,9 +1,7 @@
 ﻿using SquishIt.Framework;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Web;
 
 namespace JErikssonMassage
 {
@@ -11,22 +9,32 @@ namespace JErikssonMassage
     {
         private const string StylesPath = "~/Styles/";
         private const string ScriptsPath = "~/Scripts/";
+        private static string CombinedCssName = string.Format("combined-{0}.css", DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss"));
+        private static string CombinedJavaScriptName = string.Format("combined-{0}.js", DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss"));
+        private const string CombinedDirectoryRelativePath = "~/Content/";
+        private const string CombinedDirectoryPath = "Content/";
 
-        public const string CombinedCssName = "combined.css";
-        public const string CombinedJavaScriptName = "combined.js";
-        public const string CombinedDirectoryPath = "~/Content/";
+        public static string CombinedCssPath { get { return CombinedDirectoryPath + CombinedCssName; } }
+        public static string CombinedJsPath { get { return CombinedDirectoryPath + CombinedJavaScriptName; } }
+
+        public static void CleanOldBundles()
+        {
+            var bundleFiles = Directory.GetFiles(Path.Combine(IndexModule.AppPath + "Content\\"), "combined*");
+            var filesToRemove = bundleFiles.Where(f => f.EndsWith(".css") || f.EndsWith(".js"));
+            filesToRemove.ToList().ForEach(f => File.Delete(f));
+        }
 
         public static void BuildBundles()
         {
             Bundle.Css()
                 .AddDirectory(StylesPath)
                 .ForceRelease()
-                .Render(CombinedDirectoryPath + CombinedCssName);
+                .Render(CombinedDirectoryRelativePath + CombinedCssName);
 
             Bundle.JavaScript()
                 .AddDirectory(ScriptsPath)
                 .ForceRelease()
-                .Render(CombinedDirectoryPath + CombinedJavaScriptName);
+                .Render(CombinedDirectoryRelativePath + CombinedJavaScriptName);
         }
     }
 }
