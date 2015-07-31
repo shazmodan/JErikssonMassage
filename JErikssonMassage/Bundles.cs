@@ -17,9 +17,16 @@ namespace JErikssonMassage
         public static string CombinedCssPath { get { return CombinedDirectoryPath + CombinedCssName; } }
         public static string CombinedJsPath { get { return CombinedDirectoryPath + CombinedJavaScriptName; } }
 
+        public static readonly string AppPath;
+
+        static Bundles()
+        {
+            AppPath = AppDomain.CurrentDomain.BaseDirectory.Replace(@"\bin\Debug", "").Replace(@"\bin\Release", "");
+        }
+
         public static void CleanOldBundles()
         {
-            var bundleFiles = Directory.GetFiles(Path.Combine(IndexModule.AppPath + "Content\\"), "combined*");
+            var bundleFiles = Directory.GetFiles(Path.Combine(AppPath + "Content\\"), "combined*");
             var filesToRemove = bundleFiles.Where(f => f.EndsWith(".css") || f.EndsWith(".js"));
             filesToRemove.ToList().ForEach(f => File.Delete(f));
         }

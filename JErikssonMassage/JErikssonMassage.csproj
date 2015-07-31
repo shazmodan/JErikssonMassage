@@ -95,8 +95,13 @@
     <Content Include="Content\images\massage_large_box_716_403.jpg" />
     <Content Include="Content\images\massage_partial_187x176.jpg" />
     <Content Include="Content\images\massage_small_box_180_190.jpg" />
-    <Content Include="robots.txt" />
-    <Content Include="sitemap.xml" />
+    <EmbeddedResource Include="robots.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <BrowseToURL>~/robots.txt</BrowseToURL>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sitemap.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Content Include="index.html" />
     <Content Include="Scripts\init.js" />
     <Content Include="Styles\bootstrap.css" />

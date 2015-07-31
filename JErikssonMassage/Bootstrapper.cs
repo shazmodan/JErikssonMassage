@@ -5,9 +5,11 @@ namespace JErikssonMassage
 {
     public class Bootstrapper : DefaultNancyBootstrapper
     {
-        protected override void ConfigureConventions(NancyConventions conventions)
+        protected override void ConfigureConventions(NancyConventions nancyConventions)
         {
-            base.ConfigureConventions(conventions);
+            nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddFile("/robots.txt", "robots.txt"));
+            nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddFile("/sitemap.xml", "sitemap.xml"));
+            base.ConfigureConventions(nancyConventions);
         }
 
         protected override void ApplicationStartup(Nancy.TinyIoc.TinyIoCContainer container, Nancy.Bootstrapper.IPipelines pipelines)
