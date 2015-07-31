@@ -26,6 +26,13 @@ namespace JErikssonMassage
                 var sitemap = File.ReadAllText(sitemapFile);
                 return Response.AsText(sitemap).WithContentType("text/xml;charset=utf8");
             };
+
+            Get["/robots.txt"] = _ =>
+            {
+                var robotsFile = Path.Combine(AppPath, "Content\\robots.txt");
+                var robots = File.ReadAllText(robotsFile);
+                return Response.AsText(robots).WithContentType("text/plain;charset=utf8");
+            };
         }
     }
 }

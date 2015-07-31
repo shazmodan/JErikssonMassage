@@ -1,0 +1,4 @@
+﻿User-Agent: *
+Disallow: 
+
+Sitemap: http://www.erikssonmassage.se/sitemap.xml
